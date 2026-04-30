@@ -1,0 +1,15 @@
+# Data files
+data/
+*.tar.gz
+*.zip
+
+# Model weights
+models/
+*.pt
+*.h5
+*.bin
+
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
