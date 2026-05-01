@@ -25,7 +25,6 @@ Built as part of ISY503 Intelligent Systems at Torrens University Australia.
 - [Results & Accuracy Comparison](#results--accuracy-comparison)
 - [Ethical Considerations](#ethical-considerations)
 - [Individual Contributions](#individual-contributions)
-- [References](#references)
 
 ---
 
