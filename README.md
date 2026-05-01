@@ -44,7 +44,7 @@ Both models accept plain text product reviews and return a binary classification
 | Name | Student ID | GitHub | Contribution |
 |------|-----------|--------|-------------|
 | Nomayer Hossain | A00176827 | [@ubernomzy](https://github.com/username) | LSTM Model, BERT Model, Data Pipeline |
-| Andrew Chang | [Student ID] | [@username](https://github.com/username) | [To be updated] |
+| Andrew Chang | [A00031568] | [@fisherfriendman](https://github.com/username) | [To be updated] |
 | Kelly Thaiane Costa de Araujo | [Student ID] | [@username](https://github.com/username) | [To be updated] |
 
 ---
@@ -206,11 +206,14 @@ BERT is a black-box model. Its internal attention mechanisms are not easily inte
 
 ---
 
-### 👤 Andrew Chang — Student ID: [To be updated]
+### 👤 Andrew Chang — Student ID: A00031568
 
-**Role: [Andrew to complete]**
+**Role: Coordinator, Interface, Video Editor**
 
-[Andrew — please update this section with your contribution.
+- Coordinate group meetings and makes group meeting appointments
+- Discuss and facilitate separation of roles and task for each role
+- Create presentation slides for group presentation, and iron out the format of presentation.
+- Join and edit presentation videos from each member to hand in.
 
 ---
 
