@@ -210,9 +210,9 @@ BERT is a black-box model. Its internal attention mechanisms are not easily inte
 
 **Role: Coordinator, Interface, Video Editor**
 
-- Coordinate group meetings and makes group meeting appointments
-- Discuss and facilitate separation of roles and task for each role
-- Create presentation slides for group presentation, and iron out the format of presentation.
+- Coordinate group meetings and make group meeting appointments
+- Discuss and facilitate the separation of roles and tasks for each role
+- Create presentation slides for group presentation, and iron out the format of the presentation.
 - Join and edit presentation videos from each member to hand in.
 
 ---
