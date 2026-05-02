@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-yellow.svg)
-![Status](https://img.shields.io/badge/Status-In_progress-orange.svg)
+![Status](https://img.shields.io/badge/Status-In_Progress-orange.svg)
 
 > A neural network-based sentiment analysis system trained on Amazon product reviews, capable of classifying user input text as **Positive** or **Negative**. Two models are implemented and compared: a Bidirectional LSTM trained from scratch and a fine-tuned BERT transformer. Built as part of ISY503 Intelligent Systems at Torrens University Australia.
 
