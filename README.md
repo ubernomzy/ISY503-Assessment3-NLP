@@ -70,9 +70,9 @@ ISY503-Assessment3-NLP/
 ├── model_bert.ipynb            # BERT model (fine-tuned on Amazon reviews)
 │
 ├── web_app/
-│   ├── app.py                  # Flask web application (supports both models)
+│   ├── app.py                  
 │   └── templates/
-│       └── index.html          # Frontend interface
+│       └── index.html          # Frontend interface (Kelly to update)
 │
 ├── models/                     # Saved model weights (not tracked - see .gitignore)
 │   ├── lstm_model.pt
