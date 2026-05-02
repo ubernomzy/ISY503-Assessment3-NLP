@@ -146,12 +146,7 @@ Open `model_lstm.ipynb` in Google Colab → Runtime → Run all
 Open `model_bert.ipynb` in Google Colab → Runtime → Run all
 
 ### Launch web interface
-```bash
-cd web_app
-python app.py
-```
-Open `http://localhost:5000` — select LSTM or BERT from the interface.
-
+[Kelly to update]
 ---
 
 ## Results & Accuracy Comparison
