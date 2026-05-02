@@ -4,12 +4,9 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)
 ![HuggingFace](https://img.shields.io/badge/HuggingFace-Transformers-yellow.svg)
-![Status](https://img.shields.io/badge/Status-In%20Progress-yellow.svg)
+![Status](https://img.shields.io/badge/Status-Complete-green.svg)
 
-> A neural network-based sentiment analysis system trained on Amazon product reviews, capable of classifying user input text as **Positive** or **Negative**. Two models are implemented and compared: 
-- a Bidirectional LSTM trained from scratch 
-- a fine-tuned BERT transformer. 
-Built as part of ISY503 Intelligent Systems at Torrens University Australia.
+> A neural network-based sentiment analysis system trained on Amazon product reviews, capable of classifying user input text as **Positive** or **Negative**. Two models are implemented and compared: a Bidirectional LSTM trained from scratch and a fine-tuned BERT transformer. Built as part of ISY503 Intelligent Systems at Torrens University Australia.
 
 ---
 
@@ -17,6 +14,7 @@ Built as part of ISY503 Intelligent Systems at Torrens University Australia.
 
 - [Project Overview](#project-overview)
 - [Team Members](#team-members)
+- [Run in Google Colab](#run-in-google-colab)
 - [Repository Structure](#repository-structure)
 - [Dataset](#dataset)
 - [Models](#models)
@@ -43,9 +41,23 @@ Both models accept plain text product reviews and return a binary classification
 
 | Name | Student ID | GitHub | Contribution |
 |------|-----------|--------|-------------|
-| Nomayer Hossain | A00176827 | [@ubernomzy](https://github.com/username) | LSTM Model, BERT Model, Data Pipeline |
-| Andrew Chang | [A00031568] | [@fisherfriendman](https://github.com/username) | [To be updated] |
+| Nomayer Hossain | A00176827 | [@ubernomzy](https://github.com/ubernomzy) | LSTM Model, BERT Model, Data Pipeline, Project Architecture |
+| Andrew Chang | A00031568 | [@fisherfriendman](https://github.com/fisherfriendman) | Coordinator, Presentation, Video Editor |
 | Kelly Thaiane Costa de Araujo | [Student ID] | [@username](https://github.com/username) | [To be updated] |
+
+---
+
+## Run in Google Colab
+
+Click the buttons below to open each notebook directly in Google Colab. No setup required — data downloads automatically.
+
+| Notebook | Description | Open |
+|----------|-------------|------|
+| LSTM Model | Bidirectional LSTM trained from scratch — 76.88% accuracy | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ubernomzy/ISY503-Assessment3-NLP/blob/main/model_lstm.ipynb) |
+| BERT Model | Fine-tuned BERT transformer — 90.98% accuracy | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ubernomzy/ISY503-Assessment3-NLP/blob/main/model_bert.ipynb) |
+
+> ⚠️ **Before running:** Go to **Runtime → Change runtime type → T4 GPU → Save** for faster training.
+> Then click **Runtime → Run all**.
 
 ---
 
@@ -78,7 +90,7 @@ ISY503-Assessment3-NLP/
 **Source:** Multi-Domain Sentiment Dataset (Blitzer, Dredze & Pereira, 2007)
 http://www.cs.jhu.edu/~mdredze/datasets/sentiment/index2.html
 
-The dataset contains Amazon product reviews across 4 categories: Books, DVDs, Electronics, and Kitchen & Housewares. Each with positive and negative labels.
+The dataset contains Amazon product reviews across 4 categories: Books, DVDs, Electronics, and Kitchen & Housewares, each with positive and negative labels.
 
 **Preprocessing applied:**
 - Extracted review text from pseudo-XML format using regex
@@ -87,7 +99,7 @@ The dataset contains Amazon product reviews across 4 categories: Books, DVDs, El
 - Shuffled and split 80% training / 10% validation / 10% test
 - Total reviews after cleaning: 7,614 (balanced: ~3,800 positive, ~3,800 negative)
 
-> **Note on data:** Data files are not tracked in this repository due to size. Download from the link above and upload to Google Drive at: `MyDrive/Colab Notebooks/ISY503-Assessment3-NLP/Data/`
+> **Note on data:** Data is downloaded automatically when running either notebook; no manual setup required. The dataset (~30MB) is fetched directly from the JHU source at runtime.
 
 ---
 
@@ -103,7 +115,7 @@ The dataset contains Amazon product reviews across 4 categories: Books, DVDs, El
 - `bert-base-uncased` pre-trained transformer from HuggingFace
 - Fine-tuned on the same Amazon reviews dataset for 3 epochs
 - AdamW optimiser with linear warmup scheduler, lr=2e-5
-- **Test Accuracy: 89.05%**
+- **Test Accuracy: 90.98%**
 
 ---
 
@@ -119,29 +131,26 @@ The dataset contains Amazon product reviews across 4 categories: Books, DVDs, El
 pip install torch transformers nltk pandas numpy flask
 ```
 
-### Or in Google Colab
+### Or run directly in Google Colab
 
-```python
-from google.colab import drive
-drive.mount('/content/drive')
-
-!git clone https://github.com/<your-username>/ISY503-Assessment3-NLP.git
-%cd ISY503-Assessment3-NLP
-!pip install -r requirements.txt
-```
+Click the **Open in Colab** buttons above — data downloads automatically, no Drive access needed.
 
 ---
 
 ## Running the Project
 
 ### Run LSTM model
-Open `model_lstm.ipynb` in Google Colab and run all cells in order.
+Open `model_lstm.ipynb` in Google Colab → Runtime → Run all
 
 ### Run BERT model
-Open `model_bert.ipynb` in Google Colab and run all cells in order.
+Open `model_bert.ipynb` in Google Colab → Runtime → Run all
 
 ### Launch web interface
-[To be updated]
+```bash
+cd web_app
+python app.py
+```
+Open `http://localhost:5000` — select LSTM or BERT from the interface.
 
 ---
 
@@ -150,7 +159,7 @@ Open `model_bert.ipynb` in Google Colab and run all cells in order.
 | Model | Architecture | Val Accuracy | Test Accuracy |
 |-------|-------------|-------------|--------------|
 | Bidirectional LSTM | Custom PyTorch (from scratch) | 77.27% | 76.88% |
-| BERT Fine-tuned | HuggingFace Transformer | 91.95% | 89.05% |
+| BERT Fine-tuned | HuggingFace Transformer | 92.13% | **90.98%** |
 
 The significant accuracy gap demonstrates the advantage of transfer learning. BERT begins with deep language knowledge from pre-training on 3.3 billion words, while the LSTM learns entirely from the 7,614 training reviews.
 
@@ -179,7 +188,7 @@ BERT is a black-box model. Its internal attention mechanisms are not easily inte
 
 ---
 
-### 👤 Nomayer Hossain | Student ID: A00176827
+### 👤 Nomayer Hossain — Student ID: A00176827
 
 **Role: Data Pipeline, LSTM Model, BERT Model, Project Architecture**
 
@@ -198,22 +207,22 @@ BERT is a black-box model. Its internal attention mechanisms are not easily inte
 **BERT Model (`model_bert.ipynb`)**
 - Implemented BERT fine-tuning using HuggingFace Transformers on the same dataset
 - Configured AdamW optimiser with linear warmup scheduler across 3 epochs on T4 GPU
-- Achieved validation accuracy of 91.95%
-- Saved fine-tuned model weights to Google Drive for web interface integration
+- Achieved test accuracy of 90.98%
+- Saved fine-tuned model weights for web interface integration
 
 **Project Architecture**
 - Initialised GitHub repository, drafted README, and established folder structure
+- Configured notebooks for universal access: data downloads automatically, no Google Drive dependency
 
 ---
 
 ### 👤 Andrew Chang — Student ID: A00031568
 
-**Role: Coordinator, Interface, Video Editor**
+**Role: Coordinator, Presentation, Video Editor**
 
-- Coordinate group meetings and make group meeting appointments
-- Discuss and facilitate the separation of roles and tasks for each role
-- Create presentation slides for group presentation, and iron out the format of the presentation.
-- Join and edit presentation videos from each member to hand in.
+- Coordinated group meetings and facilitated separation of roles and tasks for each member
+- Created presentation slides for group presentation and established presentation format
+- Joined and edited presentation videos from each member for final submission
 
 ---
 
@@ -221,6 +230,6 @@ BERT is a black-box model. Its internal attention mechanisms are not easily inte
 
 **Role: [Kelly to complete]**
 
-[Kelly — please update this section with your contribution.
+[Kelly — please update this section with your contribution. Include which files or tasks you worked on, approximately 150 words.]
 
 ---
