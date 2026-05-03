@@ -213,11 +213,12 @@ BERT is a black-box model. Its internal attention mechanisms are not easily inte
 
 ### 👤 Andrew Chang — Student ID: A00031568
 
-**Role: Coordinator, Presentation, Video Editor**
+**Role: Coordinator, Presentation, Video Editor, Tester**
 
-- Coordinated group meetings and facilitated separation of roles and tasks for each member
+- Coordinated group meetings and facilitated the separation of roles and tasks for each member
 - Created presentation slides for group presentation and established presentation format
-- Joined and edited presentation videos from each member for final submission
+- Tested codes and brainstorm with colleagues on some design and direction of functions
+- Join and edited presentation videos from each member for the final submission
 
 ---
 
