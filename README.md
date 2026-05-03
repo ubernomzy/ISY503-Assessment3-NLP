@@ -42,8 +42,8 @@ Both models accept plain text product reviews and return a binary classification
 | Name | Student ID | GitHub | Contribution |
 |------|-----------|--------|-------------|
 | Nomayer Hossain | A00176827 | [@ubernomzy](https://github.com/ubernomzy) | LSTM Model, BERT Model, Data Pipeline, Project Architecture |
-| Andrew Chang | A00031568 | [@fisherfriendman](https://github.com/fisherfriendman) | Coordinator, Presentation, Video Editor |
-| Kelly Thaiane Costa de Araujo | [Student ID] | [@username](https://github.com/username) | [To be updated] |
+| Andrew Chang | A00031568 | [@fisherfriendman](https://github.com/fisherfriendman) | Coordinator, Presentation, Video Editor, Tester |
+| Kelly Thaiane Costa de Araujo | A00214756 | [@kellyaraujoo](https://github.com/username) | Frontend development, UI/UX design, and user interaction |
 
 ---
 
