@@ -69,10 +69,19 @@ ISY503-Assessment3-NLP/
 ├── model_lstm.ipynb            # Bidirectional LSTM model (trained from scratch)
 ├── model_bert.ipynb            # BERT model (fine-tuned on Amazon reviews)
 │
-├── web_app/
-│   ├── app.py                  
+├── web_app/                    # Web application (frontend + Flask backend)
+│   ├── app.py                  # Flask server and routing logic
+│   ├── static/
+│   │   │  │  └── cc/
+│   │   │  │        └── main.css
+│   │   │  └── js/
+│   │   │    └── script.js
+│   │   └── img/
+│   │         └── banner.png
+│   │          └── logo.png
+│   │
 │   └── templates/
-│       └── index.html          # Frontend interface (Kelly to update)
+│       └── index.html          # Main user interface
 │
 ├── models/                     # Saved model weights (not tracked - see .gitignore)
 │   ├── lstm_model.pt
@@ -146,7 +155,16 @@ Open `model_lstm.ipynb` in Google Colab → Runtime → Run all
 Open `model_bert.ipynb` in Google Colab → Runtime → Run all
 
 ### Launch web interface
-[Kelly to update]
+The web interface is located inside the web_app/folder. It was developed using HTML, CSS, JavaScript and Flask.
+
+To run the interface locally:
+
+Open the project folder
+Install the requirements: pip install -r requirements.txt
+Run the Flask app: python web_app/app.py
+Open the local browser link: http://127.0.0.1:5000
+The interface allows users to type a product review, click the Analyse button, and receive a Positive or Negative sentiment result. The backend is structured to allow the BERT model to be integrated into the prediction function.
+
 ---
 
 ## Results & Accuracy Comparison
@@ -222,10 +240,22 @@ BERT is a black-box model. Its internal attention mechanisms are not easily inte
 
 ---
 
-### 👤 Kelly Thaiane Costa de Araujo — Student ID: [To be updated]
+### 👤 Kelly Araujo — Student ID: A00214756
 
-**Role: [Kelly to complete]**
+**Role: Role: Frontend Development, UI/UX Design, Flask Interface, and User Interaction**
 
-[Kelly — please update this section with your contribution. Include which files or tasks you worked on, approximately 150 words.]
+**Web Interface**
+- Designed and developed the main interface for user input and result display
+- Structured layout for a simple and intuitive sentiment analysis interaction
+- Applied custom CSS for layout, responsiveness, and visual design
+- Improved user experience with clean and modern interface elements
+- Implemented JavaScript for input handling, validation, and dynamic updates
+- Added loading feedback and enabled multiple analyses without page refresh
 
----
+**Backend Integration**
+- Connected frontend to Flask backend for handling user requests
+- Structured prediction function for future BERT integration
+
+**Testing & Integration**
+- Tested the interface locally to ensure correct functionality and smooth user flow
+- Prepared the system for integration with the BERT model
