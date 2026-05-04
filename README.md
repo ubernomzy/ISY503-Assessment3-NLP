@@ -159,10 +159,10 @@ The web interface is located inside the web_app/folder. It was developed using H
 
 To run the interface locally:
 
-Open the project folder\n
-Install the requirements: pip install -r requirements.txt\n
-Run the Flask app: python web_app/app.py\n
-Open the local browser link: http://127.0.0.1:5000\n
+Open the project folder \n
+Install the requirements: pip install -r requirements.txt \n
+Run the Flask app: python web_app/app.py \n
+Open the local browser link: http://127.0.0.1:5000 \n
 The interface allows users to type a product review, click the Analyse button, and receive a Positive or Negative sentiment result.\n 
 The backend is structured to allow the BERT model to be integrated into the prediction function.
 
