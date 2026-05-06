@@ -13,7 +13,11 @@ model = None
 tokenizer = None
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
  
-MODEL_PATH = "../models/bert_finetuned"   # saved by model_bert.ipynb
+# Get the directory that the current script is in
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# saved by model_bert.ipynb
+MODEL_PATH = os.path.join(BASE_DIR, 'models', 'bert_finetuned')
  
  
 # ── Load model in background thread so Flask starts immediately ───────
