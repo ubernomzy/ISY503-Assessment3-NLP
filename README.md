@@ -232,12 +232,14 @@ BERT is a black-box model. Its internal attention mechanisms are not easily inte
 
 ### 👤 Andrew Chang — Student ID: A00031568
 
-**Role: Coordinator, Presentation, Video Editor, Tester**
+**Role: Coordinator, Presentation, Video Editor, Tester, backend interfacing**
 
 - Coordinated group meetings and facilitated the separation of roles and tasks for each member
 - Created presentation slides for group presentation and established presentation format
-- Tested codes and brainstorm with colleagues on some design and direction of functions
-- Join and edited presentation videos from each member for the final submission
+- Tested codes and brainstormed with the team on some design and direction of functions
+- Finalised presentation videos with slides for the submission
+- verifying that the BERT model's inference output integrated correctly with the Flask web interface
+- resolving mismatches between the model's output format and the frontend's expected response
 
 ---
 
