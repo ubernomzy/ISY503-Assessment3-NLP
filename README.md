@@ -239,8 +239,9 @@ BERT is a black-box model. Its internal attention mechanisms are not easily inte
 - Tested codes and brainstormed with the team on some design and direction of functions
 - Finalised presentation videos with slides for the submission
 - verifying that the BERT model's inference output integrated correctly with the Flask web interface
-- resolving mismatches between the model's output format and the frontend's expected response
-
+- resolving mismatches between the model's output format and the frontend's expected response, whilst maintaining repository structure
+- compile and amend codes using Python to join the back-end interface with the model
+  
 ---
 
 ### 👤 Kelly Araujo — Student ID: A00214756
