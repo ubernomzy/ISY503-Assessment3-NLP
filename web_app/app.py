@@ -46,7 +46,7 @@ threading.Thread(target=load_model, daemon=True).start()
  
 # ── Routes ────────────────────────────────────────────────────────────
 
-    @app.route("/")
+@app.route("/")
 def home():
     return render_template("index.html")
 
